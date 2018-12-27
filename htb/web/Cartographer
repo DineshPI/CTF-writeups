@@ -1,0 +1,20 @@
+Viewing the source code didnt give much of a clue.
+searched for XSS vulnerabilities and never found one
+since it asked for Username and password,decided to do SQL injection
+Unfamiliar with the attack installed SQLMAP to do it.
+Later realized there was no GET request in the webpage for sqlmap to work with.(Stupid me!!!)
+
+Tried simple sql injections one by one and found a working one.
+UserName:  ' or ''=' 
+Password:  ' or ''='
+
+Hit a wall again but this time the URL had a parameter ...
+
+http://docker.hackthebox.eu:59517/panel.php?info=home
+
+
+replaced it with a XSS script(that's only thing i know) didnt't work .
+since we are searching for a flag (Obviously...)
+
+http://docker.hackthebox.eu:59517/panel.php?info=flag
+gave the flag ...HTB{*sorry cannot spoil*} 
